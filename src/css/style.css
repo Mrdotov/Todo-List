@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	font-family: 'Roboto', sans-serif;
+} 
+ 
+.wrapper_list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 200px ;
+}
+.list_item{
+	display: inline-block;
+	background: #292543;
+	padding: 50px 50px;
+	border-radius: 10px;
+	width: 510px;
+	height: 400px;
+
+}
+.js-todos {
+	/* position  */
+	align-items: center;
+	padding-top: 10px;
+	/* Text-sizing */
+	font-size: 16px;
+	/* text color  */
+	color: #fff;
+
+}
