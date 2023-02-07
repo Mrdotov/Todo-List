@@ -3,7 +3,9 @@
 	padding: 0;
 	box-sizing:border-box;
 	font-family: 'Roboto', sans-serif;
+	
 } 
+body{background: #0f3443;}
  
 .wrapper_list{
 	display: flex;
@@ -13,7 +15,7 @@
 }
 .list_item{
 	display: inline-block;
-	background: #292543;
+	background: #0d303d;
 	padding: 80px 50px;
 	border-radius: 10px;
 	width: 510px;
