@@ -52,8 +52,10 @@ function render() {
 
 BtnAdd.addEventListener('click', () => {
 	const text = inputNode.value;
+	inputNode.value = "";
 	addTodo(text);
 	render();
+
 });
 
 todosNode.addEventListener('click', (event) => {
