@@ -35,8 +35,12 @@ color: white;
 	color: aqua;
 }
 .js-todos button {
-	background: none;
-	border: none;
+	background: rgb(9, 146, 82);
+	border: 5px solid rgb(9, 146, 82);
+	border-radius: 5px;
 	cursor: pointer;
+	margin: auto;
+
+
 
 }

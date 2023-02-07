@@ -37,9 +37,10 @@ function render() {
 		html += `
 	<div >
 	${todo.text}
-	<button data-id='${todo.id}'>
-		<img src="./css/img/icon-cancel.png" alt="cancel">
+	<button data-id='${todo.id}' >
+	X
 	</button>
+	
 	</div>
 	`
 	});

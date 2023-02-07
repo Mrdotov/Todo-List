@@ -14,19 +14,21 @@
 .list_item{
 	display: inline-block;
 	background: #292543;
-	padding: 50px 50px;
+	padding: 80px 50px;
 	border-radius: 10px;
 	width: 510px;
-	height: 400px;
+	height: auto;
 
 }
 .js-todos {
 	/* position  */
 	align-items: center;
-	padding-top: 10px;
+	padding-top: 20px;
 	/* Text-sizing */
 	font-size: 16px;
 	/* text color  */
 	color: #fff;
+	/* sizing */
+    max-width: 400px;
 
 }
