@@ -35,17 +35,15 @@ function render() {
 			return;
 		}
 		html += `
-	<div >
-	${todo.text}
-	<button data-id='${todo.id}' >
-	X
-	</button>
-	
+	<div >${todo.text}
+
+	<button data-id='${todo.id}'>X</button>
 	</div>
 	`
 	});
 
-	// localStorage.setItem('todo', html); 
+	// localStorage.setItem('todo', html);\
+
 	todosNode.innerHTML = html;
 	// if string is empty our output ERROR
 };
@@ -53,12 +51,15 @@ function render() {
 BtnAdd.addEventListener('click', () => {
 	const text = inputNode.value;
 	inputNode.value = "";
-	addTodo(text);
-	render();
-
-});
-
+	if (text === '') {
+		console.error('Text was not found');
+	} else {
+		addTodo(text);
+		render();
+	}
+})
 todosNode.addEventListener('click', (event) => {
+
 	if (event.target.tagName !== 'BUTTON') { return; }
 
 	const id = event.target.dataset.id;
@@ -67,5 +68,4 @@ todosNode.addEventListener('click', (event) => {
 	render()
 })
 render();
-
 
