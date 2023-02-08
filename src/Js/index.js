@@ -1,11 +1,11 @@
-// import localStorag from "./module/localStorage";
-
 
 const BtnAdd = document.getElementById('addTD');
 const inputNode = document.getElementById('input-td');
 const todosNode = document.querySelector('.js-todos')
 
-let todos = [];
+let todos = [];  // Create empty Array
+
+// Function which add todo
 
 function addTodo(text) {
 
@@ -16,7 +16,7 @@ function addTodo(text) {
 	};
 	todos.push(todo);
 }
-
+// Function which delete todo
 function deleteTodo(id) {
 	todos.forEach(todo => {
 		if (todo.id === id) {
@@ -25,7 +25,7 @@ function deleteTodo(id) {
 	});
 };
 
-
+// Function which updates todo
 function render() {
 
 	let html = '';
@@ -48,12 +48,14 @@ function render() {
 
 	// if string is empty our output ERROR
 };
-
+// Button which add a new todo
 BtnAdd.addEventListener('click', () => {
-	const text = inputNode.value;
-	inputNode.value = "";
-	localStorage.getItem('data', text);
 
+	const text = inputNode.value; // Text in input
+	inputNode.value = ""; // Clearing input after add todo
+
+	localStorage.getItem('data', text);
+	// Сhecking for the presence of a text
 	if (text === '') {
 		console.error('Text was not found');
 	} else {
@@ -64,6 +66,7 @@ BtnAdd.addEventListener('click', () => {
 	let getStorAge = localStorage.setItem('data', JSON.stringify(text));
 	getStorAge = JSON.parse(getStorAge)
 })
+// Delete todo 
 todosNode.addEventListener('click', (event) => {
 
 	if (event.target.tagName !== 'BUTTON') { return; }
@@ -71,7 +74,7 @@ todosNode.addEventListener('click', (event) => {
 	const id = event.target.dataset.id;
 
 	deleteTodo(id);
-	render()
-})
+		render()
+	})
 render();
 

@@ -1,4 +1,5 @@
 *{
+			/* postiton */
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box;
@@ -8,6 +9,7 @@
 body{background: #0f3443;}
  
 .wrapper_list{
+		/* postiton */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,8 +18,11 @@ body{background: #0f3443;}
 .list_item{
 	display: inline-block;
 	background: #09242d;
+	/* postiton */
 	padding: 80px 50px;
+	/* border */
 	border-radius: 10px;
+	/* sizing */
 	width: 510px;
 	height: auto;
 
@@ -32,5 +37,6 @@ body{background: #0f3443;}
 	color: #fff;
 	/* sizing */
     max-width: 400px;
+
 
 }
