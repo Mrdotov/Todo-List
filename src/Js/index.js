@@ -42,21 +42,27 @@ function render() {
 	`
 	});
 
-	// localStorage.setItem('todo', html);\
+
 
 	todosNode.innerHTML = html;
+
 	// if string is empty our output ERROR
 };
 
 BtnAdd.addEventListener('click', () => {
 	const text = inputNode.value;
 	inputNode.value = "";
+	localStorage.getItem('data', text);
+
 	if (text === '') {
 		console.error('Text was not found');
 	} else {
 		addTodo(text);
 		render();
 	}
+
+	let getStorAge = localStorage.setItem('data', JSON.stringify(text));
+	getStorAge = JSON.parse(getStorAge)
 })
 todosNode.addEventListener('click', (event) => {
 
