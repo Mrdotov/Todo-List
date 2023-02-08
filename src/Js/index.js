@@ -74,7 +74,7 @@ todosNode.addEventListener('click', (event) => {
 	const id = event.target.dataset.id;
 
 	deleteTodo(id);
-		render()
-	})
+	render()
+})
 render();
 
